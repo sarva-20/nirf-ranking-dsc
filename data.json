@@ -1,0 +1,200 @@
+[
+    {
+        "rank": 1,
+        "college": "IIT Madras",
+        "category": "engineering",
+        "counselling_code": "IITM001",
+        "year": 2026,
+        "scores": { "TLR": 94.62, "RP": 97.38, "GO": 80.43, "OI": 63.99, "PR": 100.00 },
+        "total": 90.04
+    },
+    {
+        "rank": 2,
+        "college": "IIT Bombay",
+        "category": "engineering",
+        "counselling_code": "IITB002",
+        "year": 2026,
+        "scores": { "TLR": 91.24, "RP": 93.37, "GO": 77.25, "OI": 58.11, "PR": 96.50 },
+        "total": 88.16
+    },
+    {
+        "rank": 3,
+        "college": "IIT Kharagpur",
+        "category": "engineering",
+        "counselling_code": "IITK003",
+        "year": 2026,
+        "scores": { "TLR": 88.45, "RP": 90.12, "GO": 75.10, "OI": 55.40, "PR": 92.10 },
+        "total": 85.23
+    },
+    {
+        "rank": 4,
+        "college": "SRMIST",
+        "category": "medical",
+        "counselling_code": "SRM004",
+        "year": 2026,
+        "scores": { "TLR": 85.10, "RP": 82.45, "GO": 80.30, "OI": 72.15, "PR": 75.00 },
+        "total": 82.20
+    },
+    {
+        "rank": 5,
+        "college": "Christ University",
+        "category": "engineering",
+        "counselling_code": "CHR005",
+        "year": 2026,
+        "scores": { "TLR": 83.50, "RP": 78.20, "GO": 82.10, "OI": 70.45, "PR": 72.00 },
+        "total": 80.25
+    },
+    {
+        "rank": 6,
+        "college": "Jain University",
+        "category": "engineering",
+        "counselling_code": "JAI006",
+        "year": 2026,
+        "scores": { "TLR": 82.30, "RP": 76.12, "GO": 81.45, "OI": 69.10, "PR": 70.00 },
+        "total": 78.80
+    },
+    {
+        "rank": 7,
+        "college": "PSG College of Technology",
+        "category": "engineering",
+        "counselling_code": "2006",
+        "year": 2026,
+        "scores": { "TLR": 81.12, "RP": 74.34, "GO": 80.21, "OI": 68.45, "PR": 68.12 },
+        "total": 77.15
+    },
+    {
+        "rank": 8,
+        "college": "Sathyabama University",
+        "category": "medical",
+        "counselling_code": "SAT008",
+        "year": 2026,
+        "scores": { "TLR": 80.45, "RP": 72.12, "GO": 79.10, "OI": 67.21, "PR": 65.45 },
+        "total": 76.05
+    },
+    {
+        "rank": 9,
+        "college": "Kumaraguru College of Technology",
+        "category": "engineering",
+        "counselling_code": "2711",
+        "year": 2026,
+        "scores": { "TLR": 79.12, "RP": 68.34, "GO": 84.10, "OI": 72.45, "PR": 60.12 },
+        "total": 74.15
+    },
+    {
+        "rank": 10,
+        "college": "Bannari Amman Institute of Technology",
+        "category": "engineering",
+        "counselling_code": "2702",
+        "year": 2026,
+        "scores": { "TLR": 78.45, "RP": 65.12, "GO": 85.10, "OI": 74.21, "PR": 58.45 },
+        "total": 73.05
+    },
+    {
+        "rank": 11,
+        "college": "Kongu Engineering College",
+        "category": "engineering",
+        "counselling_code": "2710",
+        "year": 2026,
+        "scores": { "TLR": 77.25, "RP": 63.45, "GO": 83.20, "OI": 73.15, "PR": 55.30 },
+        "total": 72.10
+    },
+    {
+        "rank": 12,
+        "college": "KPRIET",
+        "category": "engineering",
+        "counselling_code": "2712",
+        "year": 2026,
+        "scores": { "TLR": 76.80, "RP": 61.12, "GO": 88.45, "OI": 75.10, "PR": 52.00 },
+        "total": 71.80
+    },
+    {
+        "rank": 13,
+        "college": "Sri Krishna College of Engineering",
+        "category": "engineering",
+        "counselling_code": "2718",
+        "year": 2026,
+        "scores": { "TLR": 76.12, "RP": 60.34, "GO": 82.10, "OI": 72.45, "PR": 50.12 },
+        "total": 70.15
+    },
+    {
+        "rank": 14,
+        "college": "Hindustan Institute of Tech",
+        "category": "engineering",
+        "counselling_code": "1317",
+        "year": 2026,
+        "scores": { "TLR": 75.45, "RP": 58.12, "GO": 81.10, "OI": 71.21, "PR": 48.45 },
+        "total": 69.05
+    },
+    {
+        "rank": 15,
+        "college": "Karpagam Academy",
+        "category": "engineering",
+        "counselling_code": "2715",
+        "year": 2026,
+        "scores": { "TLR": 74.25, "RP": 56.45, "GO": 80.20, "OI": 70.15, "PR": 46.30 },
+        "total": 68.10
+    },
+    {
+        "rank": 16,
+        "college": "Ramakrishna Engineering College",
+        "category": "engineering",
+        "counselling_code": "2719",
+        "year": 2026,
+        "scores": { "TLR": 73.80, "RP": 54.12, "GO": 79.45, "OI": 69.10, "PR": 44.00 },
+        "total": 67.80
+    },
+    {
+        "rank": 17,
+        "college": "Eshwar College of Engineering",
+        "category": "engineering",
+        "counselling_code": "2722",
+        "year": 2026,
+        "scores": { "TLR": 72.12, "RP": 52.34, "GO": 78.10, "OI": 68.45, "PR": 42.12 },
+        "total": 66.15
+    },
+    {
+        "rank": 18,
+        "college": "St. Joseph's Institute",
+        "category": "engineering",
+        "counselling_code": "1310",
+        "year": 2026,
+        "scores": { "TLR": 71.45, "RP": 50.12, "GO": 77.10, "OI": 67.21, "PR": 40.45 },
+        "total": 65.05
+    },
+    {
+        "rank": 19,
+        "college": "Jansons Institute of Tech",
+        "category": "engineering",
+        "counselling_code": "2734",
+        "year": 2026,
+        "scores": { "TLR": 70.25, "RP": 48.45, "GO": 76.20, "OI": 66.15, "PR": 38.30 },
+        "total": 64.10
+    },
+    {
+        "rank": 20,
+        "college": "Erode Senguthar Engineering",
+        "category": "engineering",
+        "counselling_code": "2706",
+        "year": 2026,
+        "scores": { "TLR": 69.80, "RP": 46.12, "GO": 75.45, "OI": 65.10, "PR": 36.00 },
+        "total": 63.80
+    },
+    {
+        "rank": 21,
+        "college": "AIIMS Delhi",
+        "category": "medical",
+        "counselling_code": "MED001",
+        "year": 2026,
+        "scores": { "TLR": 98.45, "RP": 96.12, "GO": 92.45, "OI": 88.10, "PR": 95.00 },
+        "total": 96.20
+    },
+    {
+        "rank": 22,
+        "college": "CMC Vellore",
+        "category": "medical",
+        "counselling_code": "MED002",
+        "year": 2026,
+        "scores": { "TLR": 96.12, "RP": 94.34, "GO": 90.21, "OI": 85.45, "PR": 92.12 },
+        "total": 94.15
+    }
+]

@@ -3,187 +3,191 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NIRF Ranking - Purple Fabric/Intellect</title>
-    <!-- Fonts -->
+    <title>NIRF Ranking Intelligence - Terminal Workspace</title>
+    <!-- Modern Tech Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
-    <!-- Main Browser Chrome Frame -->
-    <div class="browser-chrome">
-        <!-- Window Controls and Tabs -->
+    <div class="bg-grid"></div>
+
+    <div class="browser-window-frame">
+        <!-- Browser Header / Toolbar -->
         <header class="browser-header">
-            <div class="window-controls">
-                <span class="dot close"></span>
-                <span class="dot minimize"></span>
-                <span class="dot maximize"></span>
+            <div class="title-bar">
+                <div class="traffic-lights">
+                    <span class="light red"></span>
+                    <span class="light yellow"></span>
+                    <span class="light green"></span>
+                </div>
+                <div class="tabs-row">
+                    <div class="tab active">
+                        <span class="tab-icon">⚡</span>
+                        <span class="tab-title">NIRF.workspace</span>
+                        <span class="tab-close">×</span>
+                    </div>
+                    <div class="tab">
+                        <span class="tab-title">New Tab</span>
+                    </div>
+                </div>
             </div>
-            <div class="tabs">
-                <div class="tab active">
-                    <span class="tab-title">Purple Fabric</span>
+            <div class="toolbar">
+                <div class="nav-controls">
+                    <button class="nav-btn">←</button>
+                    <button class="nav-btn">→</button>
+                    <button class="nav-btn">↻</button>
+                </div>
+                <div class="address-bar">
+                    <span class="lock-icon">🔒</span>
+                    <span class="url">https://nirf.workspace.local/v2026.0/rankings</span>
+                </div>
+
+                <div class="extension-stack">
+                    <div class="ext-icon cyan">N</div>
+                    <div class="ext-icon">G</div>
                 </div>
             </div>
         </header>
-        
-        <!-- Address Bar Row -->
-        <div class="address-bar-row">
-            <div class="navigation-buttons">
-                <button class="nav-btn">&larr;</button>
-                <button class="nav-btn">&rarr;</button>
-                <button class="nav-btn">&#x21bb;</button>
-            </div>
-            <div class="url-input">
-                <input type="text" value="https://purplefabric.intellect.dev" readonly>
-            </div>
-            <div class="extensions">
-                <button class="extension-btn">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M12 2L2 22h20L12 2z"/>
-                    </svg>
-                </button>
-            </div>
+
+        <!-- Main Window Content -->
+        <div class="app-shell">
+            <!-- Sidebar Explorer -->
+            <aside class="slicer-pane">
+                <div class="explorer-section">
+                    <p class="slicer-title">EXPLORER</p>
+                    <div class="slicer-group">
+                        <p class="slicer-label">active_filters</p>
+                        <div class="category-slicers" id="category-tabs">
+                            <button class="tab-item active" data-filter="all">workspace.all</button>
+                            <button class="tab-item" data-filter="engineering">src.engineering</button>
+                            <button class="tab-item" data-filter="medical">src.medical</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="explorer-section" style="margin-top: auto;">
+                    <p class="slicer-label">shortcuts</p>
+                    <div class="shortcuts-grid">
+                        <span class="key-box">⌘K</span>
+                        <span class="key-box">⇧F</span>
+                    </div>
+                    <div class="status-footer">
+                        <span class="status-dot"></span>
+                        <p id="sync-time">CONNECTING...</p>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- Workspace Viewport -->
+            <main class="dashboard-viewport">
+                <div class="viewport-header reveal">
+                    <div>
+                        <h1 class="main-title">NIRF Ranking Intelligence <span class="version-tag">v2.0 RELEASED</span></h1>
+                        <p class="sub-title">Monitored Institutional Performance Grid</p>
+                    </div>
+                    <div class="workspace-search">
+                        <input type="text" id="college-search" placeholder="Filter institutions... (⌘F)">
+                    </div>
+                </div>
+
+                <!-- KPI Tiles Grid -->
+                <section class="tile-grid reveal" style="animation-delay: 0.1s;">
+                    <article class="tile kpi-tile">
+                        <p class="tile-header">Visible Institutions</p>
+                        <p class="kpi-value" id="kpi-count">--</p>
+                        <p class="kpi-sub">Subset: current_workspace</p>
+                    </article>
+                    <article class="tile kpi-tile">
+                        <p class="tile-header">Avg. Weighted Score</p>
+                        <p class="kpi-value" id="kpi-avg">--</p>
+                        <p class="kpi-sub">+2.1% baseline_diff</p>
+                    </article>
+                    <article class="tile kpi-tile">
+                        <p class="tile-header">Leader</p>
+                        <p class="kpi-value" id="kpi-best" style="font-size: 16px; margin-top: 8px;">--</p>
+                        <p class="kpi-sub">Top ranked_entity</p>
+                    </article>
+                    <article class="tile kpi-tile">
+                        <p class="tile-header">Data Source</p>
+                        <p class="kpi-value" style="font-size: 18px; margin-top: 8px;">NIRF_SECURE_V1</p>
+                        <p class="kpi-sub">Verified internal repo</p>
+                    </article>
+                </section>
+
+                <!-- Visuals Tiles Grid -->
+                <section class="tile-grid reveal" style="animation-delay: 0.2s;">
+                    <article class="tile chart-tile">
+                        <p class="tile-header">Performance Distribution (Top 5)</p>
+                        <div class="chart-container">
+                            <canvas id="bar-chart"></canvas>
+                        </div>
+                    </article>
+                    <article class="tile chart-tile">
+                        <p class="tile-header">Criteria Breakdown (Comparative)</p>
+                        <div class="chart-container">
+                            <canvas id="insights-chart"></canvas>
+                        </div>
+                    </article>
+                </section>
+
+                <!-- Table & Inspector Grid -->
+                <section class="tile-grid reveal" style="animation-delay: 0.3s;">
+                    <article class="tile table-tile">
+                        <p class="tile-header">Institutional Data Grid</p>
+                        <div class="table-scroll">
+                            <table class="ranking-table" id="ranking-table">
+                                <thead>
+                                    <tr>
+                                        <th>[x]</th>
+                                        <th>RANK</th>
+                                        <th>CODE</th>
+                                        <th>INSTITUTION</th>
+                                        <th>SCORE</th>
+                                        <th>TREND</th>
+                                        <th>ACTION</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="ranking-body"></tbody>
+                            </table>
+                        </div>
+                        <!-- Pagination Controls -->
+                        <div class="pagination-controls">
+                            <button id="prev-page" class="view-btn">PREV</button>
+                            <span id="page-info" class="page-info">PAGE 1 / 5</span>
+                            <button id="next-page" class="view-btn">NEXT</button>
+                        </div>
+                    </article>
+                    <article class="tile inspector-tile">
+    <p class="tile-header">NIRF AI Analysis Engine</p>
+    <div style="display:flex; flex-direction:column; gap:10px; height:100%;">
+        <textarea 
+            id="queryInput" 
+            rows="5" 
+            placeholder="Paste institutional data here... (e.g. Satpura Institute data)"
+            style="background:#0d1117; color:#c9d1d9; border:1px solid #30363d; border-radius:6px; padding:10px; font-family:'JetBrains Mono',monospace; font-size:12px; resize:none; width:100%; box-sizing:border-box;">
+        </textarea>
+        <button 
+            id="analyzeBtn"
+            style="background:#238636; color:#fff; border:none; padding:8px 16px; border-radius:6px; font-family:'JetBrains Mono',monospace; font-size:12px; cursor:pointer; letter-spacing:1px;">
+            ▶ RUN NIRF ANALYSIS
+        </button>
+        <div 
+            id="output" 
+            style="background:#0d1117; color:#7ee787; border:1px solid #30363d; border-radius:6px; padding:10px; font-family:'JetBrains Mono',monospace; font-size:11px; overflow-y:auto; flex:1; white-space:pre-wrap; min-height:150px;">
+            // awaiting query input...
         </div>
-
-        <!-- Main Viewport Context -->
-        <main class="viewport">
-            <!-- Hero Section -->
-            <section class="hero slide-up">
-                <div class="hero-left">
-                    <div class="version-tag pulse">v2.0 RELEASED</div>
-                    <h1 class="hero-headline">Technical<br>Excellence</h1>
-                    <button class="chrome-store-btn">
-                        Add to Chrome
-                    </button>
-                </div>
-                <div class="hero-right">
-                    <div class="simulated-window" id="demo-window">
-                        <div class="sim-card sim-target">
-                            <div class="sim-content"></div>
-                        </div>
-                        <div class="cursor"></div>
-                        <div class="inspector-tooltip">
-                            <span class="prop">display:</span> <span class="val">flex;</span><br>
-                            <span class="prop">align-items:</span> <span class="val">center;</span>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Release Notes Section -->
-            <section class="release-notes slide-up" style="animation-delay: 0.1s;">
-                <div class="changelog-label">CHANGELOG</div>
-                <div class="divider"></div>
-                <div class="features-list">
-                    <div class="feature-item"><span class="bullet">+</span> Unified properties API implemented</div>
-                    <div class="feature-item"><span class="bullet">+</span> Reduced parsing overhead by 40%</div>
-                    <div class="feature-item"><span class="bullet">+</span> Added synthetic shadow DOM support</div>
-                    <div class="feature-item"><span class="bullet">+</span> Zero-config React integration</div>
-                </div>
-            </section>
-
-            <!-- Interactive Workspace (IDE) -->
-            <section class="workspace slide-up" style="animation-delay: 0.2s;">
-                <!-- Left Sidebar -->
-                <aside class="sidebar left-sidebar">
-                    <div class="sidebar-header">EXPLORER</div>
-                    <ul class="file-tree">
-                        <li class="folder open"><span>src</span>
-                            <ul>
-                                <li class="file active">App.tsx</li>
-                                <li class="file">utils.ts</li>
-                                <li class="file">styles.css</li>
-                            </ul>
-                        </li>
-                    </ul>
-                    <div class="shortcuts-footer">
-                        <div class="shortcut"><kbd>⌘</kbd> + <kbd>P</kbd> Search</div>
-                        <div class="shortcut"><kbd>⇧</kbd> + <kbd>⌘</kbd> + <kbd>F</kbd> Find</div>
-                    </div>
-                </aside>
-
-                <!-- Center Stage -->
-                <div class="center-stage pattern-grid">
-                    <div class="simulated-selection-box">
-                        <div class="selection-tag">div.card <span class="dims">1200x400</span></div>
-                        <div class="selected-element">
-                            <!-- Focus UI Element -->
-                            <h1>Interactive UI</h1>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Right Sidebar (Property Inspector) -->
-                <aside class="sidebar right-sidebar">
-                    <div class="inspector-panel">
-                        <div class="panel-header" style="padding: 16px; font-size: 11px; font-weight: 600; color: var(--text-muted); border-bottom: 1px solid var(--border-light);">PROPERTY INSPECTOR</div>
-                        <div class="panel-section">
-                            <div class="section-title">Typography</div>
-                            <div class="inspector-grid">
-                                <div class="ins-label">font-family</div>
-                                <div class="ins-val"><select class="ins-select"><option>Inter</option></select></div>
-                                
-                                <div class="ins-label drag-indicator">font-size</div>
-                                <div class="ins-val"><input type="text" value="16px" class="ins-input"></div>
-                                
-                                <div class="ins-label drag-indicator">font-weight</div>
-                                <div class="ins-val"><select class="ins-select"><option>500</option></select></div>
-                            </div>
-                        </div>
-                        <div class="panel-section">
-                            <div class="section-title">Colors</div>
-                            <div class="inspector-grid">
-                                <div class="ins-label">text</div>
-                                <div class="ins-val flex-val">
-                                    <div class="color-swatch text-color"></div>
-                                    <span class="hex-code">#111827</span>
-                                </div>
-                                <div class="ins-label">background</div>
-                                <div class="ins-val flex-val">
-                                    <div class="color-swatch bg-color"></div>
-                                    <span class="hex-code">#FFFFFF</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </aside>
-            </section>
-
-            <!-- Readme Manifesto -->
-            <section class="manifesto slide-up" style="animation-delay: 0.3s;">
-                <div class="readme-container">
-                    <div class="readme-header">
-                        <span class="file-name">README.md</span>
-                    </div>
-                    <div class="readme-content">
-                        <h3># Manifesto</h3>
-                        <p>We build tools that dissolve into the workflow. Absolute technical precision masked as simplicity. This is the Browser-Core modernism approach, where every pixel is accountable.</p>
-                        <h3># Installation</h3>
-                        <div class="code-block">
-                            <code>npm install @purple-fabric/core</code>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Technical FAQ -->
-            <section class="faq-section slide-up" style="animation-delay: 0.4s;">
-                <details class="faq-item">
-                    <summary>Is this compatible with modern frameworks?</summary>
-                    <p class="faq-answer">Yes, it exposes headless hooks ensuring 100% compatibility with React, Vue, and Svelte.</p>
-                </details>
-                <details class="faq-item">
-                    <summary>How does the synthetic shadow DOM work?</summary>
-                    <p class="faq-answer">It isolates styles at the AST level before rendering, guaranteeing zero side-effects on the global scope.</p>
-                </details>
-                <details class="faq-item">
-                    <summary>What is the bundle footprint?</summary>
-                    <p class="faq-answer">Core runtime is strictly under 4.2kb gzipped, prioritizing critical path metrics.</p>
-                </details>
-            </section>
-        </main>
     </div>
+</article>
+                </section>
+            </main>
+        </div>
+    </div>
+    </div>
+
     <script src="script.js"></script>
 </body>
 </html>
