@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NIRF Ranking - Purple Fabric/Intellect</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Main Browser Chrome Frame -->
+    <div class="browser-chrome">
+        <!-- Window Controls and Tabs -->
+        <header class="browser-header">
+            <div class="window-controls">
+                <span class="dot close"></span>
+                <span class="dot minimize"></span>
+                <span class="dot maximize"></span>
+            </div>
+            <div class="tabs">
+                <div class="tab active">
+                    <span class="tab-title">Purple Fabric</span>
+                </div>
+            </div>
+        </header>
+        
+        <!-- Address Bar Row -->
+        <div class="address-bar-row">
+            <div class="navigation-buttons">
+                <button class="nav-btn">&larr;</button>
+                <button class="nav-btn">&rarr;</button>
+                <button class="nav-btn">&#x21bb;</button>
+            </div>
+            <div class="url-input">
+                <input type="text" value="https://purplefabric.intellect.dev" readonly>
+            </div>
+            <div class="extensions">
+                <button class="extension-btn">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M12 2L2 22h20L12 2z"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Main Viewport Context -->
+        <main class="viewport">
+            <!-- Hero Section -->
+            <section class="hero slide-up">
+                <div class="hero-left">
+                    <div class="version-tag pulse">v2.0 RELEASED</div>
+                    <h1 class="hero-headline">Technical<br>Excellence</h1>
+                    <button class="chrome-store-btn">
+                        Add to Chrome
+                    </button>
+                </div>
+                <div class="hero-right">
+                    <div class="simulated-window" id="demo-window">
+                        <div class="sim-card sim-target">
+                            <div class="sim-content"></div>
+                        </div>
+                        <div class="cursor"></div>
+                        <div class="inspector-tooltip">
+                            <span class="prop">display:</span> <span class="val">flex;</span><br>
+                            <span class="prop">align-items:</span> <span class="val">center;</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Release Notes Section -->
+            <section class="release-notes slide-up" style="animation-delay: 0.1s;">
+                <div class="changelog-label">CHANGELOG</div>
+                <div class="divider"></div>
+                <div class="features-list">
+                    <div class="feature-item"><span class="bullet">+</span> Unified properties API implemented</div>
+                    <div class="feature-item"><span class="bullet">+</span> Reduced parsing overhead by 40%</div>
+                    <div class="feature-item"><span class="bullet">+</span> Added synthetic shadow DOM support</div>
+                    <div class="feature-item"><span class="bullet">+</span> Zero-config React integration</div>
+                </div>
+            </section>
+
+            <!-- Interactive Workspace (IDE) -->
+            <section class="workspace slide-up" style="animation-delay: 0.2s;">
+                <!-- Left Sidebar -->
+                <aside class="sidebar left-sidebar">
+                    <div class="sidebar-header">EXPLORER</div>
+                    <ul class="file-tree">
+                        <li class="folder open"><span>src</span>
+                            <ul>
+                                <li class="file active">App.tsx</li>
+                                <li class="file">utils.ts</li>
+                                <li class="file">styles.css</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <div class="shortcuts-footer">
+                        <div class="shortcut"><kbd>⌘</kbd> + <kbd>P</kbd> Search</div>
+                        <div class="shortcut"><kbd>⇧</kbd> + <kbd>⌘</kbd> + <kbd>F</kbd> Find</div>
+                    </div>
+                </aside>
+
+                <!-- Center Stage -->
+                <div class="center-stage pattern-grid">
+                    <div class="simulated-selection-box">
+                        <div class="selection-tag">div.card <span class="dims">1200x400</span></div>
+                        <div class="selected-element">
+                            <!-- Focus UI Element -->
+                            <h1>Interactive UI</h1>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Sidebar (Property Inspector) -->
+                <aside class="sidebar right-sidebar">
+                    <div class="inspector-panel">
+                        <div class="panel-header" style="padding: 16px; font-size: 11px; font-weight: 600; color: var(--text-muted); border-bottom: 1px solid var(--border-light);">PROPERTY INSPECTOR</div>
+                        <div class="panel-section">
+                            <div class="section-title">Typography</div>
+                            <div class="inspector-grid">
+                                <div class="ins-label">font-family</div>
+                                <div class="ins-val"><select class="ins-select"><option>Inter</option></select></div>
+                                
+                                <div class="ins-label drag-indicator">font-size</div>
+                                <div class="ins-val"><input type="text" value="16px" class="ins-input"></div>
+                                
+                                <div class="ins-label drag-indicator">font-weight</div>
+                                <div class="ins-val"><select class="ins-select"><option>500</option></select></div>
+                            </div>
+                        </div>
+                        <div class="panel-section">
+                            <div class="section-title">Colors</div>
+                            <div class="inspector-grid">
+                                <div class="ins-label">text</div>
+                                <div class="ins-val flex-val">
+                                    <div class="color-swatch text-color"></div>
+                                    <span class="hex-code">#111827</span>
+                                </div>
+                                <div class="ins-label">background</div>
+                                <div class="ins-val flex-val">
+                                    <div class="color-swatch bg-color"></div>
+                                    <span class="hex-code">#FFFFFF</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </aside>
+            </section>
+
+            <!-- Readme Manifesto -->
+            <section class="manifesto slide-up" style="animation-delay: 0.3s;">
+                <div class="readme-container">
+                    <div class="readme-header">
+                        <span class="file-name">README.md</span>
+                    </div>
+                    <div class="readme-content">
+                        <h3># Manifesto</h3>
+                        <p>We build tools that dissolve into the workflow. Absolute technical precision masked as simplicity. This is the Browser-Core modernism approach, where every pixel is accountable.</p>
+                        <h3># Installation</h3>
+                        <div class="code-block">
+                            <code>npm install @purple-fabric/core</code>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Technical FAQ -->
+            <section class="faq-section slide-up" style="animation-delay: 0.4s;">
+                <details class="faq-item">
+                    <summary>Is this compatible with modern frameworks?</summary>
+                    <p class="faq-answer">Yes, it exposes headless hooks ensuring 100% compatibility with React, Vue, and Svelte.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>How does the synthetic shadow DOM work?</summary>
+                    <p class="faq-answer">It isolates styles at the AST level before rendering, guaranteeing zero side-effects on the global scope.</p>
+                </details>
+                <details class="faq-item">
+                    <summary>What is the bundle footprint?</summary>
+                    <p class="faq-answer">Core runtime is strictly under 4.2kb gzipped, prioritizing critical path metrics.</p>
+                </details>
+            </section>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
